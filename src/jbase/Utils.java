@@ -138,6 +138,7 @@ public class Utils {
 				upd.setInt(4, id);
 
 				upd.executeUpdate();
+				System.out.println("Atualizando produtos...");
 				upd.close();
 				desconectar(conn);
 				System.out.println("O produto " + nome + " foi atualizado");
@@ -154,7 +155,7 @@ public class Utils {
 		}
 
 
-		System.out.println("Atualizando produtos...");
+
 	}
 	
 	public static void deletar() {
@@ -178,9 +179,10 @@ public class Utils {
 				upd.setInt(1, id);
 
 				upd.execute();
+				System.out.println("Deletando produtos...");
 				upd.close();
 				desconectar(conn);
-				System.out.println("O produto " + id + " foi atualizado");
+				System.out.println("O produto " + id + " foi deletado");
 
 			}else{
 				System.out.println("Não existe produto com o id informado");
@@ -194,7 +196,7 @@ public class Utils {
 		}
 
 
-		System.out.println("Deletando produtos...");
+
 	}
 	
 	public static void menu() {
